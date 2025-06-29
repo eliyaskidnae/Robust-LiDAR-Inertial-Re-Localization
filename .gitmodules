@@ -1,0 +1,6 @@
+[submodule "map_based_localization"]
+	path = map_based_localization
+	url = git@github.com:eliyaskidnae/map_based_localization.git
+[submodule "FAST_LIO"]
+	path = FAST_LIO
+	url = git@github.com:eliyaskidnae/FAST_LIO.git
