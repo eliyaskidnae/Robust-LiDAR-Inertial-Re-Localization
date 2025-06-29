@@ -4,3 +4,6 @@
 [submodule "FAST_LIO"]
 	path = FAST_LIO
 	url = git@github.com:eliyaskidnae/FAST_LIO.git
+[submodule "SFA3D"]
+	path = SFA3D
+	url = git@github.com:eliyaskidnae/SFA3D.git
