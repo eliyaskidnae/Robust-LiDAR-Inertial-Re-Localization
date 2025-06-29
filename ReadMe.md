@@ -1,7 +1,5 @@
 ## Robust-LiDAR-Inertial-Re-Localization
 
-This is a brief description of your project.
-
 ## Motivation 
 Autonomous robots require accurate localization in GPS-denied environments like
 indoors or urban canyons.GNSS-INS systems are prone to failure in these conditions,
@@ -9,13 +7,13 @@ while real-time SLAM often drift without loop closures
 Map-based localization offers a stable and accurate alternative, but it faces several
 key challenges:
 
-1. Real-time performance and Scalability: Handling high-resolution 3D maps and
+1. <srong>Real-time performance and Scalability</strong>: Handling high-resolution 3D maps and
     computing scan-to-map registration efficiently.
 
-2. Drift correction: Fusing local motion estimation with global map constraints while
+2. <strong>Drift correction</strong>: Fusing local motion estimation with global map constraints while
 preserving consistency.
 
-3. Dynamic environments: Removing or mitigating the effect of moving objects
+3. <strong>Dynamic environments</strong>: Removing or mitigating the effect of moving objects
 during scan matching.
 
 4. Localization failures in feature-sparse or unmapped transition zones.
@@ -49,10 +47,13 @@ robustness, and scalability.
 
 [paper](./media/Thesis.pdf) | [poster](./media/Poster.pdf) | [Video](https://www.youtube.com/watch?v=dNa92Y9yDuk)
 
+## Conclusions and Future Work
 
-
-## Results 
-
+1. <strong>Accurate & Drift-Free</strong>:Achieves sub-decimeter accuracy by fusing FAST-LIO2 and NDT with a sliding-window factor graph, effectively reducing drift without loop closures.
+2. <strog>Real-Time & Scalable</strong>: Maintains less than 23 ms latency using multithreaded NDT and dynamic submap loading. Sliding window factor graph optimization remains bounded regardless of trajectory length.
+3. <strong>Robust to Challenges</strong>: Dynamic object removal improves convergence, and fused graph keeps localization stable even when scan matching fails.
+4. <strong>Limitations & Future Work</strong>: Assumes a known initial pose and a static map. Future directions include global
+re-localization, adaptive
 ## Installation
 
 ```
