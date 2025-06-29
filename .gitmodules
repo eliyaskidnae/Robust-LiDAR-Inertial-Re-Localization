@@ -7,3 +7,6 @@
 [submodule "SFA3D"]
 	path = SFA3D
 	url = git@github.com:eliyaskidnae/SFA3D.git
+[submodule "localization"]
+	path = localization
+	url = git@github.com:eliyaskidnae/localization.git
