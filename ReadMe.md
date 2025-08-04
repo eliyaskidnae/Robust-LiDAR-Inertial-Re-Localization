@@ -47,13 +47,18 @@ robustness, and scalability.
 
 [paper](./media/Thesis.pdf) | [poster](./media/Poster.pdf) | [Video](https://www.youtube.com/watch?v=dNa92Y9yDuk)
 
-## Conclusions and Future Work
+## Conclusions
 
 1. <strong>Accurate & Drift-Free</strong>:Achieves sub-decimeter accuracy by fusing FAST-LIO2 and NDT with a sliding-window factor graph, effectively reducing drift without loop closures.
 2. <strog>Real-Time & Scalable</strong>: Maintains less than 23 ms latency using multithreaded NDT and dynamic submap loading. Sliding window factor graph optimization remains bounded regardless of trajectory length.
 3. <strong>Robust to Challenges</strong>: Dynamic object removal improves convergence, and fused graph keeps localization stable even when scan matching fails.
-4. <strong>Limitations & Future Work</strong>: Assumes a known initial pose and a static map. Future directions include global
-re-localization, adaptive
+4. Robustness in Degraded Conditions: Demonstrated reliable localization perfor-
+mance in feature-sparse areas and under moderate visibility degradation (e.g., fog),
+with fallback to high-rate odometry when scan matching becomes unreliable.
+## Limitation and Future Work
+1. <strong>Limitations & Future Work</strong>: Assumes a known initial pose and a static map.Future directions include global
+re-localization, adaptive map updating, and integration of camera/radar for
+increased robustness.
 ## Installation
 
 ```
@@ -72,7 +77,7 @@ https://autowarefoundation.github.io/autoware-documentation/main/installation/au
 ```
 source /install/setup.bash
 ros2 launch fast_lio mapping.launch.py config_file:='ouster64.yaml'
-ros2 autoware_ndt_scan_matcher publish_init_pose
+ros2 run autoware_ndt_scan_matcher publish_init_pose \\publish intial pose of the robot
 ros2 launch autoware_map_loader saxion_loader_super.launch.xml 
 ros2 launch autoware_ndt_scan_matcher ndt_scan_matcher_saxion1.launch.xml 
 ros2 run map_based_localization fusion_node
