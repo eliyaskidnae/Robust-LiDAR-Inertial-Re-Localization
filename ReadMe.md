@@ -52,7 +52,7 @@ robustness, and scalability.
 1. <strong>Accurate & Drift-Free</strong>:Achieves sub-decimeter accuracy by fusing FAST-LIO2 and NDT with a sliding-window factor graph, effectively reducing drift without loop closures.
 2. <strog>Real-Time & Scalable</strong>: Maintains less than 23 ms latency using multithreaded NDT and dynamic submap loading. Sliding window factor graph optimization remains bounded regardless of trajectory length.
 3. <strong>Robust to Challenges</strong>: Dynamic object removal improves convergence, and fused graph keeps localization stable even when scan matching fails.
-4. Robustness in Degraded Conditions: Demonstrated reliable localization perfor-
+4. <strong>Degraded Conditions</strong>: Demonstrated reliable localization perfor-
 mance in feature-sparse areas and under moderate visibility degradation (e.g., fog),
 with fallback to high-rate odometry when scan matching becomes unreliable.
 ## Limitation and Future Work
